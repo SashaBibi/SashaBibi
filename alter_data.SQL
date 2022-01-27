@@ -12,3 +12,13 @@ update usr set role_name='editor' where id<=8;
 update usr set role_name='user' where id>=8
 
 alter table role_permission add constraint FK_ROLE_PERMISSION foreign key (role_name) references permission;
+
+update university_member set position_id=1 where id<3;
+update university_member set position_id=1 where id>3;
+update university_member set position_id=1 where id>7;
+
+update group_member set group_id=1 where id<3;
+update group_member set group_id=2 where id>3;
+update group_member set group_id=3 where id>9;
+update group_member set group_id=4 where id>15;
+update group_member set group_id=5 where id>20;
