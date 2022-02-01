@@ -22,3 +22,7 @@ update group_member set group_id=2 where id>3;
 update group_member set group_id=3 where id>9;
 update group_member set group_id=4 where id>15;
 update group_member set group_id=5 where id>20;
+
+select m.first_name, m.middle_name, m.last_name, m.e_mail, p.name from university_member um join usr m on um.user_id=m.id join position p on um.position_id=p.id
+select m.first_name, m.middle_name, m.last_name, m.e_mail, g.name from group_member gm join university_member um on gm.university_member_id=um.user_id join groups g on gm.group_id=g.id join usr m on um.user_id=m.id;
+select m.first_name, m.middle_name, m.last_name, m.e_mail, d.name from university_member um join usr m on um.user_id=m.id join department d on um.department_id=d.id;
